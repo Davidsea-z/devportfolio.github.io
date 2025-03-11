@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/devportfolio.github.io/static/css/main.d99f5cc4.css",
-    "main.js": "/devportfolio.github.io/static/js/main.2df19be1.js",
+    "main.js": "/devportfolio.github.io/static/js/main.91e977ce.js",
     "static/js/415.4d6acbeb.chunk.js": "/devportfolio.github.io/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/devportfolio.github.io/static/js/787.1ed0c42c.chunk.js",
     "static/media/ocean_bg.jpg": "/devportfolio.github.io/static/media/ocean_bg.75418b603ac71055bd4a.jpg",
@@ -18,12 +18,12 @@
     "static/media/pre.svg": "/devportfolio.github.io/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/devportfolio.github.io/index.html",
     "main.d99f5cc4.css.map": "/devportfolio.github.io/static/css/main.d99f5cc4.css.map",
-    "main.2df19be1.js.map": "/devportfolio.github.io/static/js/main.2df19be1.js.map",
+    "main.91e977ce.js.map": "/devportfolio.github.io/static/js/main.91e977ce.js.map",
     "415.4d6acbeb.chunk.js.map": "/devportfolio.github.io/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/devportfolio.github.io/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d99f5cc4.css",
-    "static/js/main.2df19be1.js"
+    "static/js/main.91e977ce.js"
   ]
 }
