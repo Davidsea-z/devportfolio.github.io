@@ -19,37 +19,38 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am a passionate mathematics student at CUHK with a focus on Data Science and Machine Learning 
+              I am a passionate mathematics student at CUHK with a focus on Data Science and Machine Learning
               <br />
               <br />I am proficient in
               <i>
-                <b className="purple"> Python, R, and MATLAB </b>
+                <b className="purple"> Python, R, MATLAB and SQL </b>
               </i>
+              for data analysis and scientific computing
               <br />
               <br />
               My research interests are in &nbsp;
               <i>
-                <b className="purple">Machine Learning, Data Analysis </b> and {" "}
+                <b className="purple">Machine Learning, Deep Learning </b> and {" "}
                 <b className="purple">
                   Financial Mathematics
                 </b>
               </i>
               <br />
               <br />
-              I am also passionate about
+              I am also skilled in
               <i>
                 <b className="purple">
                   {" "}
-                  applying mathematical modeling
+                  data visualization
                 </b>
               </i>
-              &nbsp;to solve real-world problems using
+              &nbsp;using
               <i>
-                <b className="purple"> Python</b>
+                <b className="purple"> Tableau </b>
               </i>
-              &nbsp; and
+              &nbsp;and proficient with
               <i>
-                <b className="purple"> R and MATLAB</b>
+                <b className="purple"> Git, Docker and AWS </b>
               </i>
             </p>
           </Col>
