@@ -4,7 +4,7 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/Entrepreneur managing a business.png";  // 更新图片路径
+import laptopImg from "../../Assets/about.png";  
 import Toolstack from "./Toolstack";
 
 function About() {
