@@ -32,7 +32,7 @@ function App() {
       {loading ? (
         <Loader />
       ) : (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Navbar />
           <ScrollToTop />
           <Routes>
