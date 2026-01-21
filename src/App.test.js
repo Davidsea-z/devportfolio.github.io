@@ -8,6 +8,13 @@ jest.mock("./components/Loader", () => {
   };
 });
 
+// Avoid initializing tsparticles (it can log asynchronously after tests finish).
+jest.mock("./components/Particle", () => {
+  return function MockParticle() {
+    return null;
+  };
+});
+
 import App from "./App";
 
 test("renders navbar after initial loader", () => {
