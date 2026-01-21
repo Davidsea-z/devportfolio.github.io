@@ -4,37 +4,67 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
-function ProjectCards(props) {
+function ProjectCards({
+  imgPath,
+  imgAlt,
+  title,
+  description,
+  ghLink,
+  demoLink,
+  isBlog = false,
+  tags = [],
+}) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
+      <Card.Img
+        variant="top"
+        src={imgPath}
+        alt={imgAlt || `${title} preview`}
+        loading="lazy"
+        className="project-card-img"
+      />
+      <Card.Body className="project-card-body">
+        <Card.Title className="project-card-title">{title}</Card.Title>
+        <Card.Text className="project-card-description">
+          {description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+        {Array.isArray(tags) && tags.length > 0 && (
+          <ul className="project-card-tags">
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        )}
 
-        {!props.isBlog && props.demoLink && (
+        <div className="project-card-actions">
           <Button
             variant="primary"
-            href={props.demoLink}
+            href={ghLink}
             target="_blank"
-            style={{ marginLeft: "10px" }}
+            rel="noreferrer"
+            className="project-card-btn"
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <BsGithub aria-hidden="true" />
+            <span>{isBlog ? "Blog" : "GitHub"}</span>
           </Button>
-        )}
+
+          {!isBlog && demoLink && (
+            <Button
+              variant="outline-light"
+              href={demoLink}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card-btn"
+            >
+              <CgWebsite aria-hidden="true" />
+              <span>Demo</span>
+            </Button>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );
 }
+
 export default ProjectCards;
