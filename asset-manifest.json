@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/devportfolio.github.io/static/css/main.86443028.css",
-    "main.js": "/devportfolio.github.io/static/js/main.789481f4.js",
-    "static/js/108.1df154f4.chunk.js": "/devportfolio.github.io/static/js/108.1df154f4.chunk.js",
-    "static/js/27.2163fce8.chunk.js": "/devportfolio.github.io/static/js/27.2163fce8.chunk.js",
-    "static/media/genetic.png": "/devportfolio.github.io/static/media/genetic.1c544194e11382b0147e.png",
-    "static/media/ocean_bg.jpg": "/devportfolio.github.io/static/media/ocean_bg.75418b603ac71055bd4a.jpg",
-    "static/media/fluid.png": "/devportfolio.github.io/static/media/fluid.55f327ca598a911cc829.png",
-    "static/media/about.png": "/devportfolio.github.io/static/media/about.cd86605310a78948dae7.png",
-    "static/media/Online Business Meetings.png": "/devportfolio.github.io/static/media/Online Business Meetings.5953cadf857aa89a0a61.png",
-    "static/media/Businessman.png": "/devportfolio.github.io/static/media/Businessman.3cd624734d628d87c61f.png",
-    "static/media/diffusion.png": "/devportfolio.github.io/static/media/diffusion.49308aec6fd5c647f716.png",
-    "static/media/cv_data_ENG.pdf": "/devportfolio.github.io/static/media/cv_data_ENG.de53b0f536d6c5396326.pdf",
-    "static/media/financial.png": "/devportfolio.github.io/static/media/financial.ca72bd211e4c456099c6.png",
-    "static/media/bitcoin.png": "/devportfolio.github.io/static/media/bitcoin.7ebd191bf3609645a5d7.png",
-    "static/media/pre.svg": "/devportfolio.github.io/static/media/pre.d4812f51c8c80976eaab.svg",
-    "index.html": "/devportfolio.github.io/index.html"
+    "main.css": "/static/css/main.15e0c482.css",
+    "main.js": "/static/js/main.447db17e.js",
+    "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/genetic.png": "/static/media/genetic.1c544194e11382b0147e.png",
+    "static/media/ocean_bg.jpg": "/static/media/ocean_bg.75418b603ac71055bd4a.jpg",
+    "static/media/fluid.png": "/static/media/fluid.55f327ca598a911cc829.png",
+    "static/media/about.png": "/static/media/about.cd86605310a78948dae7.png",
+    "static/media/Online Business Meetings.png": "/static/media/Online Business Meetings.5953cadf857aa89a0a61.png",
+    "static/media/Businessman.png": "/static/media/Businessman.3cd624734d628d87c61f.png",
+    "static/media/diffusion.png": "/static/media/diffusion.49308aec6fd5c647f716.png",
+    "static/media/cv_data_ENG.pdf": "/static/media/cv_data_ENG.de53b0f536d6c5396326.pdf",
+    "static/media/financial.png": "/static/media/financial.ca72bd211e4c456099c6.png",
+    "static/media/bitcoin.png": "/static/media/bitcoin.7ebd191bf3609645a5d7.png",
+    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/index.html",
+    "main.15e0c482.css.map": "/static/css/main.15e0c482.css.map",
+    "main.447db17e.js.map": "/static/js/main.447db17e.js.map",
+    "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86443028.css",
-    "static/js/main.789481f4.js"
+    "static/css/main.15e0c482.css",
+    "static/js/main.447db17e.js"
   ]
 }
