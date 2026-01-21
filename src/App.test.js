@@ -1,4 +1,13 @@
+import React from "react";
 import { act, render, screen } from "@testing-library/react";
+
+// Avoid loading lottie/canvas during tests (jsdom doesn't implement canvas APIs).
+jest.mock("./components/Loader", () => {
+  return function MockLoader() {
+    return <div data-testid="loader" />;
+  };
+});
+
 import App from "./App";
 
 test("renders navbar after initial loader", () => {
