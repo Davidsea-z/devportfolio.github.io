@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { act, render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders navbar after initial loader", () => {
+  jest.useFakeTimers();
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // App shows a 2s loader before rendering the routed app.
+  act(() => {
+    jest.advanceTimersByTime(2000);
+  });
+
+  expect(screen.getByText(/David W\./i)).toBeInTheDocument();
+
+  jest.useRealTimers();
 });
