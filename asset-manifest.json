@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/devportfolio.github.io/static/css/main.c55cee7b.css",
-    "main.js": "/devportfolio.github.io/static/js/main.41d6c567.js",
+    "main.js": "/devportfolio.github.io/static/js/main.74924764.js",
     "static/js/415.4d6acbeb.chunk.js": "/devportfolio.github.io/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/devportfolio.github.io/static/js/787.1ed0c42c.chunk.js",
     "static/media/genetic.png": "/devportfolio.github.io/static/media/genetic.1c544194e11382b0147e.png",
-    "static/media/pdf.worker.min.js": "/devportfolio.github.io/static/media/pdf.worker.min.68512988e12b5966b417.js",
     "static/media/ocean_bg.jpg": "/devportfolio.github.io/static/media/ocean_bg.75418b603ac71055bd4a.jpg",
     "static/media/fluid.png": "/devportfolio.github.io/static/media/fluid.55f327ca598a911cc829.png",
     "static/media/about.png": "/devportfolio.github.io/static/media/about.cd86605310a78948dae7.png",
@@ -18,12 +17,12 @@
     "static/media/pre.svg": "/devportfolio.github.io/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/devportfolio.github.io/index.html",
     "main.c55cee7b.css.map": "/devportfolio.github.io/static/css/main.c55cee7b.css.map",
-    "main.41d6c567.js.map": "/devportfolio.github.io/static/js/main.41d6c567.js.map",
+    "main.74924764.js.map": "/devportfolio.github.io/static/js/main.74924764.js.map",
     "415.4d6acbeb.chunk.js.map": "/devportfolio.github.io/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/devportfolio.github.io/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c55cee7b.css",
-    "static/js/main.41d6c567.js"
+    "static/js/main.74924764.js"
   ]
 }
