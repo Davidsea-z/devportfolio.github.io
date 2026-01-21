@@ -6,11 +6,8 @@ import pdf from "../../Assets/cv_data_ENG.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-// Use a bundled worker instead of a CDN one so it works reliably on GitHub Pages.
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
+// Use a CDN worker URL (compatible with CRA/Jest which doesn't support `import.meta`).
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function Resume() {
   const [width, setWidth] = useState(1200);
