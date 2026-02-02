@@ -4,11 +4,13 @@ import homeLogo from "../../Assets/Online Business Meetings.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import AnimatedBackground from "./AnimatedBackground";
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
+        <AnimatedBackground />
         <Particle />
         <Container className="home-content">
           <Row>
