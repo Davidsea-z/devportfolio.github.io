@@ -8,13 +8,10 @@ function ProjectCards(props) {
   return (
     <Card className="project-card-view">
       <div className="project-card-image-wrapper">
-        <Card.Img variant="top" src={props.imgPath} alt={props.title} />
-        <div className="project-card-overlay">
-          <div className="project-card-tags">
-            {props.tags && props.tags.map((tag, index) => (
-              <span key={index} className="project-tag">{tag}</span>
-            ))}
-          </div>
+        <div className="project-card-tags">
+          {props.tags && props.tags.map((tag, index) => (
+            <span key={index} className="project-tag">{tag}</span>
+          ))}
         </div>
       </div>
       <Card.Body>
