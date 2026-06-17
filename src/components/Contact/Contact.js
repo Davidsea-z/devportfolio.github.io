@@ -163,8 +163,8 @@ function Contact() {
                 <AiOutlineMail className="contact-icon" />
                 <div>
                   <h5>Email</h5>
-                  <a href="mailto:hanwei.wang@example.com">
-                    hanwei.wang@example.com
+                  <a href="mailto:tokakimiku@gmail.com">
+                    tokakimiku@gmail.com
                   </a>
                 </div>
               </div>

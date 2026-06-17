@@ -6,7 +6,9 @@ import {
   SiMacos,
   SiLatex,
   SiAnaconda,
+  SiOpenai,
 } from "react-icons/si";
+import { FaRobot, FaBrain } from "react-icons/fa";
 
 function Toolstack() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +38,9 @@ function Toolstack() {
     { Icon: SiAnaconda, name: "Anaconda" },
     { Icon: SiLatex, name: "LaTeX" },
     { Icon: SiMacos, name: "macOS" },
+    { Icon: FaBrain, name: "Claude Code" },
+    { Icon: FaRobot, name: "Cursor" },
+    { Icon: SiOpenai, name: "Codex" },
   ];
 
   return (

@@ -3,13 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-// Import project images
-import financialImg from "../../Assets/Projects/financial.png";
-import bitcoinImg from "../../Assets/Projects/bitcoin.png";
-import fluidImg from "../../Assets/Projects/fluid.png";
-import geneticImg from "../../Assets/Projects/genetic.png";
-import diffusionImg from "../../Assets/Projects/diffusion.png";
-
 function Projects() {
   const [visibleCards, setVisibleCards] = useState([]);
   const cardRefs = useRef([]);
@@ -38,44 +31,49 @@ function Projects() {
 
   const projects = [
     {
-      imgPath: financialImg,
+      imgPath: null,
       isBlog: false,
       title: "Financial Analytics Project",
       description:
         "Comprehensive financial analysis project focusing on market trends, risk assessment, and portfolio optimization. Utilized Python for data analysis, statistical modeling, and visualization to derive meaningful insights from financial data.",
       ghLink: "https://github.com/Davidsea-z/Financial-Analytics-Midterm-Project",
+      tags: ["Python", "Pandas", "Matplotlib", "Finance"],
     },
     {
-      imgPath: bitcoinImg,
+      imgPath: null,
       isBlog: false,
       title: "RL-based Bitcoin Trading Strategy",
       description:
         "Developed an advanced cryptocurrency trading system using Reinforcement Learning algorithms. Implemented and optimized trading strategies using historical Bitcoin market data, featuring automated decision-making and risk management capabilities.",
       ghLink: "https://github.com/Davidsea-z/RL-on-trading-strategy-of-bitcoins",
+      tags: ["Python", "RL", "PyTorch", "Crypto"],
     },
     {
-      imgPath: fluidImg,
+      imgPath: null,
       isBlog: false,
       title: "Fluid Saturation Model in Porous Media",
       description:
         "Developed a mathematical model for simulating fluid saturation dynamics in porous media. Implemented numerical methods to solve partial differential equations, providing insights into fluid flow behavior in complex porous structures.",
       ghLink: "https://github.com/Davidsea-z/Fluid-Saturation-Model-in-Porous-Media",
+      tags: ["MATLAB", "PDE", "Numerical Methods"],
     },
     {
-      imgPath: geneticImg,
+      imgPath: null,
       isBlog: false,
       title: "Genetic Algorithm Implementation",
       description:
         "Developed a comprehensive genetic algorithm framework demonstrating evolutionary computation principles. Implemented selection, crossover, and mutation operators to solve optimization problems, showcasing the power of bio-inspired computing techniques.",
       ghLink: "https://github.com/Davidsea-z/genetic_algorithm_example",
+      tags: ["Python", "Genetic Algorithm", "Optimization"],
     },
     {
-      imgPath: diffusionImg,
+      imgPath: null,
       isBlog: false,
       title: "Diffusion Model for Generating Computer Mouse Design",
       description:
         "Implemented a diffusion model for predicting computer mouse design. Applied deep learning techniques to model and generate realistic mouse movement patterns, demonstrating practical applications of generative AI in human-computer interaction.",
       ghLink: "https://github.com/Davidsea-z/Diffusion-Model-in-Computer-Mouse",
+      tags: ["Python", "Diffusion", "Deep Learning"],
     },
   ];
 
