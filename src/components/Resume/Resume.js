@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/cv_data_ENG.pdf";  
+import pdf from "../../Assets/cv_data_ENG.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -12,13 +12,38 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 function Resume() {
   const [width, setWidth] = useState(1200);
   const [numPages, setNumPages] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
+
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div>
+    <div ref={sectionRef}>
       <Container fluid className="resume-section">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
@@ -33,11 +58,20 @@ function Resume() {
           </Button>
         </Row>
 
-        <Row className="resume">
+        <Row
+          className="resume"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "all 0.8s ease-out",
+          }}
+        >
           <Document
             file={pdf}
             className="d-flex justify-content-center flex-column align-items-center"
-            onLoadSuccess={({ numPages: nextNumPages }) => setNumPages(nextNumPages)}
+            onLoadSuccess={({ numPages: nextNumPages }) =>
+              setNumPages(nextNumPages)
+            }
             loading={<div style={{ textAlign: "center" }}>Loading CV…</div>}
             error={
               <div style={{ textAlign: "center" }}>

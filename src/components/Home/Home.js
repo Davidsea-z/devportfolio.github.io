@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/Online Business Meetings.png";
 import Particle from "../Particle";
@@ -7,8 +7,29 @@ import Type from "./Type";
 import AnimatedBackground from "./AnimatedBackground";
 
 function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section>
+    <section ref={sectionRef}>
       <Container fluid className="home-section" id="home">
         <AnimatedBackground />
         <Particle />
@@ -36,11 +57,13 @@ function Home() {
               <img
                 src={homeLogo}
                 alt="home pic"
-                className="img-fluid"
-                style={{ 
+                className={`img-fluid home-image ${isVisible ? 'fade-in-up' : ''}`}
+                style={{
                   maxHeight: "450px",
-                  transform: "scale(1.2)",  // 稍微放大图片
-                  marginTop: "20px"         // 调整上边距
+                  transform: isVisible ? "scale(1.2)" : "scale(0.8)",
+                  marginTop: "20px",
+                  opacity: isVisible ? 1 : 0,
+                  transition: "all 1s ease-out",
                 }}
               />
             </Col>

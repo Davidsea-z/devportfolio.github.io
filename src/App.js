@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
+import Contact from "./components/Contact/Contact";
 import {
   BrowserRouter as Router,
   Route,
@@ -15,16 +16,18 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./components/Footer"; 
+import Footer from "./components/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading time
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 2000); // Shows loader for 2 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -40,6 +43,7 @@ function App() {
             <Route path="/project" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/"/>} />
           </Routes>
           <Footer />

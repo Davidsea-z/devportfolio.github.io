@@ -738,3 +738,131 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* --------- */
+/* Contact */
+/* --------- */
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  min-height: 100vh;
+}
+
+.contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  padding: 12px 15px !important;
+  border-radius: 8px !important;
+}
+
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.contact-input:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #c084f5 !important;
+  box-shadow: 0 0 0 0.2rem rgba(192, 132, 245, 0.25) !important;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px !important;
+  font-size: 1.1em !important;
+  background-color: #623686 !important;
+  border-color: #623686 !important;
+  transition: all 0.3s ease !important;
+}
+
+.contact-btn:hover {
+  background-color: #6d20c5d7 !important;
+  border-color: #6d20c5d7 !important;
+  transform: translateY(-2px);
+}
+
+.contact-info-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+  color: #c084f5;
+  margin-top: 3px;
+}
+
+.contact-info-item h5 {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #c084f5;
+}
+
+.contact-info-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+  color: #c084f5;
+}
+
+/* --------- */
+/* Animations */
+/* --------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* --------- */
+/* Responsive */
+/* --------- */
+@media (max-width: 767px) {
+  .contact-form-wrapper,
+  .contact-info-wrapper {
+    margin-bottom: 20px;
+  }
+}

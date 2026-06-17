@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/Businessman.png";  // 更新图片路径
+import myImg from "../../Assets/Businessman.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -10,8 +10,29 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="home-about-section" id="about" ref={sectionRef}>
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
@@ -56,15 +77,18 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img 
-                src={myImg} 
-                className="img-fluid" 
-                alt="avatar" 
-                style={{ 
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt="avatar"
+                style={{
                   width: "100%",
                   margin: "auto",
                   display: "block",
-                  marginTop: "100px"
+                  marginTop: "100px",
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(30px)",
+                  transition: "all 0.8s ease-out",
                 }}
               />
             </Tilt>
@@ -83,6 +107,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="GitHub"
                 >
                   <AiFillGithub />
                 </a>
@@ -93,6 +118,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="Twitter"
                 >
                   <AiOutlineTwitter />
                 </a>
@@ -103,6 +129,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="LinkedIn"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -113,6 +140,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
+                  aria-label="Instagram"
                 >
                   <AiFillInstagram />
                 </a>
